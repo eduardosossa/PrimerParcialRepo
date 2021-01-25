@@ -8,7 +8,7 @@ namespace PryUserSossaES.Models
 {
     public class Geo
     {
-        [key]
+        [Key]
         [Required]
         public string lat { get; set; }
         [Required]

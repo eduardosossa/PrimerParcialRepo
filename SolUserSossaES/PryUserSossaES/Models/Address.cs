@@ -8,7 +8,7 @@ namespace PryUserSossaES.Models
 {
     public class Address
     {
-        [key]
+        [Key]
         [Required]
         public string street { get; set; }
         [Required]
