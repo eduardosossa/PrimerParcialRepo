@@ -17,12 +17,14 @@ namespace PryUserSossaES.Controllers
         private DataContext db = new DataContext();
 
         // GET: api/Companies
+        [Authorize]
         public IQueryable<Company> GetCompanies()
         {
             return db.Companies;
         }
 
         // GET: api/Companies/5
+        [Authorize]
         [ResponseType(typeof(Company))]
         public IHttpActionResult GetCompany(string id)
         {
@@ -36,6 +38,7 @@ namespace PryUserSossaES.Controllers
         }
 
         // PUT: api/Companies/5
+        [Authorize]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutCompany(string id, Company company)
         {
@@ -71,6 +74,7 @@ namespace PryUserSossaES.Controllers
         }
 
         // POST: api/Companies
+        [Authorize]
         [ResponseType(typeof(Company))]
         public IHttpActionResult PostCompany(Company company)
         {
@@ -101,6 +105,7 @@ namespace PryUserSossaES.Controllers
         }
 
         // DELETE: api/Companies/5
+        [Authorize]
         [ResponseType(typeof(Company))]
         public IHttpActionResult DeleteCompany(string id)
         {

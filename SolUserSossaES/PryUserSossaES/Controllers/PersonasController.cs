@@ -17,12 +17,14 @@ namespace PryUserSossaES.Controllers
         private DataContext db = new DataContext();
 
         // GET: api/Personas
+        [Authorize]
         public IQueryable<Persona> GetPersonas()
         {
             return db.Personas;
         }
 
         // GET: api/Personas/5
+        [Authorize]
         [ResponseType(typeof(Persona))]
         public IHttpActionResult GetPersona(int id)
         {
@@ -36,6 +38,7 @@ namespace PryUserSossaES.Controllers
         }
 
         // PUT: api/Personas/5
+        [Authorize]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutPersona(int id, Persona persona)
         {
@@ -71,6 +74,7 @@ namespace PryUserSossaES.Controllers
         }
 
         // POST: api/Personas
+        [Authorize]
         [ResponseType(typeof(Persona))]
         public IHttpActionResult PostPersona(Persona persona)
         {
@@ -86,6 +90,7 @@ namespace PryUserSossaES.Controllers
         }
 
         // DELETE: api/Personas/5
+        [Authorize]
         [ResponseType(typeof(Persona))]
         public IHttpActionResult DeletePersona(int id)
         {

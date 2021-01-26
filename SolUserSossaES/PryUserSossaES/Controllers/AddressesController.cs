@@ -17,12 +17,14 @@ namespace PryUserSossaES.Controllers
         private DataContext db = new DataContext();
 
         // GET: api/Addresses
+        [Authorize]
         public IQueryable<Address> GetAddresses()
         {
             return db.Addresses;
         }
 
         // GET: api/Addresses/5
+        [Authorize]
         [ResponseType(typeof(Address))]
         public IHttpActionResult GetAddress(string id)
         {
@@ -36,6 +38,7 @@ namespace PryUserSossaES.Controllers
         }
 
         // PUT: api/Addresses/5
+        [Authorize]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutAddress(string id, Address address)
         {
@@ -71,6 +74,7 @@ namespace PryUserSossaES.Controllers
         }
 
         // POST: api/Addresses
+        [Authorize]
         [ResponseType(typeof(Address))]
         public IHttpActionResult PostAddress(Address address)
         {
@@ -101,6 +105,7 @@ namespace PryUserSossaES.Controllers
         }
 
         // DELETE: api/Addresses/5
+        [Authorize]
         [ResponseType(typeof(Address))]
         public IHttpActionResult DeleteAddress(string id)
         {

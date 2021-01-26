@@ -17,12 +17,14 @@ namespace PryUserSossaES.Controllers
         private DataContext db = new DataContext();
 
         // GET: api/Geos
+        [Authorize]
         public IQueryable<Geo> GetGeos()
         {
             return db.Geos;
         }
 
         // GET: api/Geos/5
+        [Authorize]
         [ResponseType(typeof(Geo))]
         public IHttpActionResult GetGeo(string id)
         {
@@ -36,6 +38,7 @@ namespace PryUserSossaES.Controllers
         }
 
         // PUT: api/Geos/5
+        [Authorize]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutGeo(string id, Geo geo)
         {
@@ -71,6 +74,7 @@ namespace PryUserSossaES.Controllers
         }
 
         // POST: api/Geos
+        [Authorize]
         [ResponseType(typeof(Geo))]
         public IHttpActionResult PostGeo(Geo geo)
         {
@@ -101,6 +105,7 @@ namespace PryUserSossaES.Controllers
         }
 
         // DELETE: api/Geos/5
+        [Authorize]
         [ResponseType(typeof(Geo))]
         public IHttpActionResult DeleteGeo(string id)
         {
